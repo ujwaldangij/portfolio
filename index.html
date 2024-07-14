@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ujwal Dangi Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Ujwal Dangi</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/file.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Ujwal Dangi</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Full Stack Developer with expertise \nin PHP, Laravel, and React.',
+										'Experienced in creating robust web applications \nand integrating APIs.',
+										'Skilled in front-end technologies: \nHTML, CSS, JavaScript.',
+										'Strong background in software testing \nand REST API development.',
+										'Passionate about learning and \nstaying updated with industry trends.',
+										'Developed complex API-based solutions \nfor finance, healthcare, and education.',
+										'Implemented risk management systems \nfor the share market.',
+										'Created health management systems \nfor hospitals.',
+										'Built webinar management platforms \nfor pharmaceutical companies.'
+									];
+
+
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 100); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 100);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>A Senior PHP Laravel Developer</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p>
+									<!-- <a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a> -->
+									<a href="https://github.com/ujwaldangij" class="btn btn-primary py-3 px-4">My
+										works</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/face2.png" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Ujwal Dangi</span></p>
+											<p><span class="title-s">Job Role: </span> <span>Senior PHP Laravel
+													Developer</span></p>
+											<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> -->
+											<p><span class="title-s">Experience: </span> <span id="experience"></span>
+											</p>
+											<p><span class="title-s">Address: </span> <span>Mumbai, India</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>PHP & Laravel</span>
+									<span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>HTML & CSS</span>
+									<span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>JavaScript</span>
+									<span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>REST API</span>
+									<span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>SQL</span>
+									<span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>React</span>
+									<span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%"
+											aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>AWS & Cloud Computing</span>
+									<span class="pull-right">45%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 45%"
+											aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>DevOps</span>
+									<span class="pull-right">45%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 45%"
+											aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Software Testing</span>
+									<span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Browser Automation</span>
+									<span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>Highly skilled Laravel Developer with expertise in designing and implementing complex
+									API-based solutions. Proven track record in developing robust systems for diverse
+									industries including finance, healthcare, and education. Strong background in risk
+									management systems, health management solutions, and webinar management platforms.
+									Excellent problem-solving abilities and a commitment to delivering high-quality,
+									scalable software solutions.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Software Development</span>
+									</li>
+									<li class="d-flex"><span>Domain:</span> <span>API &amp; Web Development</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Computer Science</span>
+									</li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi , Marathi</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud,Api,Micro Web Services,
+											Excel, Git, &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Cricket
+											Photography,Teaching,learning</span></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="15">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/ujwal-dangi-38b33319b/"
+										class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p id="intro">
+						My name is Ujwal Umesh Dangi, a highly skilled Laravel Developer with extensive experience in
+						designing and implementing complex API-based solutions. With over <span
+							id="dynamic-experience-duration"></span> of experience, I specialize in developing robust
+						systems for diverse industries such as finance, healthcare, and education. My background
+						includes creating innovative solutions like Techborest, a comprehensive API project, and
+						developing sophisticated systems like Techrisk for risk management in the share market. I am
+						committed to delivering high-quality, scalable software solutions that consistently meet and
+						exceed client expectations.
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">13 june 2022-Present</span>
+						<h2>Senior Data Analyst</h2>
+						<span class="position">Techexcel Software Solution Pvt. Ltd</span>
+						<p class="mt-4">Techborest, an API-based project in Laravel, encompassing 300 APIs and serving
+							40 clients globally.
+						<ul>
+							<li>Developed functionalities for file uploads, CSV file downloads, and 7-zip format
+								downloads.</li>
+							<li>Implemented queuing mechanisms to efficiently handle heavy API request loads.</li>
+							<li>Utilized TCPDF for PDF generation and PHP GD Library for image manipulation.</li>
+							<li>Created comprehensive API documentation using Swagger and monitored real-time insights
+								with Telescope.</li>
+							<li>Ensured robust security measures including Scantum token system, rate limiting, and IP
+								binding.</li>
+							<li>Automated monthly backup of log files and conducted vulnerability tests following NSE
+								and BSE India guidelines.</li>
+						</ul>
+						</p>
+						<p class="mt-4">Techrisk, a sophisticated risk management system for the share market, focusing
+							on mitigating market and specific risks for brokers.
+						<ul>
+							<li>Developed a comprehensive dashboard providing real-time insights into market conditions,
+								specific security performances, and portfolio risk factors.</li>
+							<li>Implemented tools for market trend tracking, risk analysis, portfolio diversification,
+								and performance tracking.</li>
+							<li>Utilized Laravel Dusk for automating broker tasks such as fetching 'bhav' files from
+								NSE, BSE, MCX, and NCDEX and importing them into the database.</li>
+							<li>Created multiple commands to retrieve and import files from different exchanges,
+								ensuring data accuracy and reliability.</li>
+							<li>Implemented a cron job to fetch the latest files from exchanges every five minutes,
+								Monday to Friday.</li>
+							<li>Integrated notification systems via email and SMS to alert brokers about important
+								updates and notifications related to their portfolios.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">16 August 2021 - 10 june 2022</span>
+						<h2>Jr. Web Developer</h2>
+						<span class="position">Exicon Media Solutions Pvt Ltd</span>
+						<p class="mt-4">
+							Created a webinar management system for doctors to share knowledge and conduct product
+							branding sessions.
+						<ul>
+							<li>Developed a CMS for quick and efficient creation of webinar portals for doctors.</li>
+							<li>Integrated Zoom API to fetch live video feeds into Vimeo via iframes, facilitating
+								seamless streaming.</li>
+							<li>Implemented a user-friendly interface with top header and sidebar layouts for optimal
+								user experience.</li>
+							<li>Developed a comment section for real-time audience engagement and interaction during
+								webinars.</li>
+							<li>Utilized by prominent pharmaceutical companies like IPCA, Mankind, and Dr. Reddy's Lab
+								for hosting live sessions and product branding.</li>
+							<li>Incorporated manager PO and billing functionalities to streamline operational processes
+								and manage financial transactions effectively.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019-2021</span>
+						<h2>Bachelor of Computer Science</h2>
+						<span class="position">Mumbai University</span>
+						<p class="mt-4">Grade: First class distinction.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2017-2018</span>
+						<h2>Higher Secondary School</h2>
+						<span class="position">Maharashtra State Board</span>
+						<p class="mt-4">Grade: Second class distinction.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="resume/UjwalDangi_Cv.pdf" class="btn btn-primary py-4 px-5" download>Download CV</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are the projects made on Laravel & php.</p>
+				</div>
+			</div>
+			<div class="row d-flex justify-content-center">
+				<div class="col-12 d-flex ftco-animate">
+					<div class="blog-entry justify-content-center">
+						<a href="https://github.com/ujwaldangij/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/ujwaldangij/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Techborest</a>
+							</h3>
+							<p>Developed an API-based project in Laravel, encompassing 300 APIs. The project includes
+								functionalities for file uploads, CSV file downloads, and 7-zip format downloads.
+								Implemented queuing mechanisms to handle heavy API request loads efficiently.
+								Additionally, incorporated PDF generation using TCPDF and image manipulation using PHP
+								GD Library to write text to images. Created comprehensive API documentation using
+								Swagger and utilized Telescope for real-time insights into incoming requests,
+								exceptions, and application performance. Implemented daily log files with detailed API
+								request success and error logging using dedicated log viewer packages. Developed a
+								command-line tool to monitor and notify developers of failed API requests, facilitating
+								immediate issue resolution and task allocation. Implemented a Laravel command to
+								automate monthly backup of log files to a separate disk, leveraging Laravel's scheduling
+								feature and cron jobs for seamless execution. Ensured robust security measures including
+								a Scantum token system with 24-hour validation for each token, rate limiting on all API
+								requests, and binding API access to specific users with valid IP addresses. Conducted
+								vulnerability tests following guidelines from NSE and BSE India for enhanced security.
+								Successfully delivered the API to 40 clients including Dhan, NJ India, CowinSwitch
+								Kuber, KIFS,Indira and more.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 d-flex ftco-animate">
+					<div class="blog-entry justify-content-center">
+						<a href="https://github.com/ujwaldangij/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/ujwaldangij/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Techrisk</a>
+							</h3>
+							<p>Developed a sophisticated risk management system for the share market, focusing on mitigating market and specific risks for brokers. Market risk impacts the entire market simultaneously and cannot be diversified away, whereas specific risk pertains to individual securities and can be minimized through diversification strategies. Implemented a comprehensive dashboard providing brokers with real-time insights into market conditions, specific security performances, and risk factors affecting their portfolios. The dashboard includes features to track market trends, analyze risk exposure, and make informed investment decisions.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 d-flex ftco-animate">
+					<div class="blog-entry justify-content-center">
+						<a href="https://github.com/ujwaldangij/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/ujwaldangij/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">DoctorHealthChecker</a>
+							</h3>
+							<p>Developed a comprehensive health management system for Somaya Hospital, deployed on their internal server. The project caters to multiple roles including admin, Mr, Pythokind, Thyrocare, and manager, providing functionalities such as scheduling doctor appointments, medical reminders, tracking doctor activities, and managing test results.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 d-flex ftco-animate">
+					<div class="blog-entry justify-content-center">
+						<a href="https://github.com/ujwaldangij/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/ujwaldangij/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql"> Webinar Management System</a>
+							</h3>
+							<p>Developed a versatile webinar management system designed to create dedicated portals for doctors to share knowledge and conduct product branding sessions. The system includes a CMS that allows for easy portal creation with a simple click-through process. Each portal features a top header and sidebar layout where live video streams of doctors are displayed on the left, and a comment section allows audience interaction on the right.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="300">0</strong>
+							<span>Api</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="15">0</strong>
+							<span>Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="2">0</strong>
+							<span>APK</span>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="500">0</strong>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/ujwaldangij" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Mumbai, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://7738605499">7738605499</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:ujwaldangi335789@gmail.com">ujwaldangi335789@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="#">resumelink</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a href="#"
+									class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<li class="ftco-animate">
+							<a href="https://github.com/ujwaldangij">
+								<span class="icon-github"></span> <!-- Replace icon-youtube with icon-github -->
+							</a>
+						</li>
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/ujwal-dangi-38b33319b/"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.instagram.com/ujwal_57_dangi"><span
+									class="icon-instagram"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="icon-heart color-danger" aria-hidden="true"></i> <a
+							href="#" target="_blank"></a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+	<script>
+		const startDate = new Date('2021-08-16');
+
+		// Get the current date
+		const currentDate = new Date();
+
+		// Calculate the difference in years and months
+		let years = currentDate.getFullYear() - startDate.getFullYear();
+		let months = currentDate.getMonth() - startDate.getMonth();
+
+		// Adjust the year if the current month is before the start month
+		if (months < 0) {
+			years--;
+			months += 12;
+		}
+
+		// Display the experience
+		const experienceElement = document.getElementById('experience');
+		experienceElement.textContent = `${years} Years ${months} Months`;
+	</script>
+	<script>
+		// Function to calculate years and months of experience
+		function calculateDynamicExperience(startingDate) {
+			const currentDate = new Date();
+			const startingDateObject = new Date(startingDate);
+			let totalYears = currentDate.getFullYear() - startingDateObject.getFullYear();
+			let totalMonths = currentDate.getMonth() - startingDateObject.getMonth();
+
+			if (totalMonths < 0) {
+				totalYears--;
+				totalMonths += 12;
+			}
+
+			return { totalYears, totalMonths };
+		}
+
+		// Start date of the career
+		const careerStartDate = '2021-08-16';
+
+		// Calculate experience
+		const { totalYears, totalMonths } = calculateDynamicExperience(careerStartDate);
+
+		// Format experience duration string
+		const formattedExperienceDuration = `${totalYears} Years${totalMonths > 0 ? ' and ' + totalMonths + ' Months' : ''}`;
+
+		// Set the experience duration text in the HTML
+		document.getElementById('dynamic-experience-duration').textContent = formattedExperienceDuration;
+	</script>
+</body>
+
+</html>
