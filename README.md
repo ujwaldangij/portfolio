@@ -1,30 +1,26 @@
-# Ujwal Power Portfolio V3
+# Ujwal Dangi Portfolio
 
-Fixes included:
+This is my personal portfolio website showcasing my experience, skills, projects, and resume as a Laravel Developer.
 
-- Resume button visible in navbar, hero and contact section.
-- Navbar links are brighter and stay in one clean line on desktop.
-- Mobile menu improved.
-- Typing line changed from `specialized_in:` to clean `Specialized in` label.
-- Floating cards are moved away from face area.
-- Back to top remains fixed.
-- Experience is dynamic from `experienceStartDate` in `js/main.js`.
+## About Me
 
-## Dynamic experience
+I am Ujwal Dangi, an experienced Laravel Developer specializing in API development, backend systems, and web applications for finance, healthcare, education, risk management, health systems, and webinar platforms.
 
-Change this value in `js/main.js` only:
+## Features
+
+- Responsive personal portfolio website
+- Resume download button in navbar, hero section, and contact section
+- Dynamic experience calculation from `js/main.js`
+- Clean desktop navbar layout
+- Improved mobile menu
+- Professional profile section
+- Fixed back-to-top button
+- Project and skills showcase
+- Contact section with resume access
+
+## Dynamic Experience
+
+Update this value only in `js/main.js`:
 
 ```js
 experienceStartDate: "2021-02-01"
-```
-
-The website calculates years live whenever it opens.
-
-## Required paths
-
-```text
-images/profile.png
-resume/Ujwal_Dangi_Resume.pdf
-```
-
-If your photo is JPG, the code also tries `images/profile.jpg`.
